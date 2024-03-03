@@ -44,7 +44,6 @@ html::-webkit-scrollbar-thumb{
 
 body{
    background-color: var(--light-bg);
-   padding-left: 30rem;
 }
 
 body.dark{
@@ -139,6 +138,12 @@ section{
    background-color: var(--white);
    z-index: 1000;
    border-bottom: var(--border);
+   background: linear-gradient(
+      to left,
+      #50b34d,
+      #2e692c
+   );
+
 }
 
 .header .flex{
@@ -150,8 +155,11 @@ section{
 }
 
 .header .flex .logo{
-   font-size: 2.5rem;
-   color: var(--black);
+   font-family: "Chilanka", cursive;
+   font-size: 3rem;
+   font-weight: 600;
+   color: white;
+   padding-top: 10px;
 }
 
 .header .flex .search-form{
@@ -246,11 +254,12 @@ section{
 .side-bar{
    position: fixed;
    top: 0; left: 0;
-   width: 30rem;
+   width: 10rem;
    background-color: var(--white);
    height: 100vh;
    border-right: var(--border);
    z-index: 1200;
+
 }
 
 .side-bar #close-btn{
@@ -282,34 +291,22 @@ section{
 }
 
 .side-bar .profile .image{
-   height: 10rem;
-   width: 10rem;
+   height: 6rem;
+   width:6rem;
    border-radius: 50%;
    object-fit: contain;
    margin-bottom: 1rem;
 }
 
-.side-bar .profile .name{
-   font-size: 2rem;
-   color:var(--black);
-   overflow: hidden;
-   text-overflow: ellipsis;
-   white-space: nowrap;
-}
-
-.side-bar .profile .role{
-   font-size: 1.8rem;
-   color: var(--light-color);
-}
-
 .side-bar .navbar a{
    display: block;
    padding: 2rem;
-   font-size: 2rem;
+   font-size: 2.5rem;
+   text-align: center;
 }
 
 .side-bar .navbar a i{
-   margin-right: 1.5rem;
+
    color:var(--main-color);
    transition: .2s linear;
 }
@@ -322,9 +319,7 @@ section{
    background-color: var(--light-bg);
 }
 
-.side-bar .navbar a:hover i{
-   margin-right: 2.5rem;
-}
+
 
 .side-bar.active{
    left: -30rem;
@@ -401,7 +396,44 @@ section{
 .home-grid .box-container .likes span{
    color:var(--main-color);
 }
+.home-grid .box-container .sticky-notes{
+   width: 250px;
+   height: 250px;
+   background-color: rgb(254, 204, 243);
+   border-bottom-right-radius: 30px;
+   padding:2rem;
+}
 
+.home-grid .box-container .sticky-notes .title{
+   font-size: 2rem;
+   color: var(--black);
+   text-transform: capitalize;
+}
+
+.home-grid .box-container .sticky-notes .flex{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+   margin-top: 2rem;
+}
+.home-grid .box-container .mini-lb{
+   background-color: var(--white);
+   border-radius: .5rem;
+   padding:2rem;
+}
+
+.home-grid .box-container .mini-lb .title{
+   font-size: 2rem;
+   color: var(--black);
+   text-transform: capitalize;
+}
+
+.home-grid .box-container .mini-lb .flex{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+   margin-top: 2rem;
+}
 .about .row{
    display: flex;
    align-items: center;
