@@ -1,0 +1,201 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .calendar-container {
+    padding: 168px;
+    margin-left: -42px;
+    margin-right: -143px;
+    margin-top: -172px;
+  }
+  
+  h1 {
+    font-family: 'Chilanka', cursive;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #020003; /* Violet color */
+    padding-top: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-controls {
+    margin-bottom: 20px;
+  }
+  
+  .calendar-controls span {
+    font-size: 1.2rem;
+    margin-right: 20px;
+  }
+  
+  .calendar-controls button {
+    margin-right: 10px;
+  }
+  
+  #calendar {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1.2rem;
+  }
+  
+  #calendar th,
+  #calendar td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #calendar th {
+    background-color: #090110; /* Violet color */
+    color: #fff;
+  }
+  
+  #calendar td {
+    background-color: #a4a4a4; /* Lavender color */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #calendar td:hover {
+    background-color: #f4e9f4; /* Plum color */
+  }
+  
+  .task-yellow {
+    background-color: #fff176; /* Light yellow color */
+  }
+  
+  .task-red {
+    background-color: #ef9a9a; /* Light red color */
+  }
+  
+  .task-blue {
+    background-color: #81d4fa; /* Light blue color */
+  }
+  
+  .task-green {
+    background-color: #a5d6a7; /* Light green color */
+  }
+  
+  .task-orange {
+    background-color: #ffcc80; /* Light orange color */
+  }
+  
+  .task-purple {
+    background-color: #ce93d8; /* Light purple color */
+  }
+  
+  .task-cyan {
+    background-color: #80deea; /* Light cyan color */
+  }
+  
+  .button-82-pushable {
+    position: relative;
+    display: inline-block;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+  }
+  .button-82-edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+      to left,
+      #000000 0%, /* Black color */
+      #000000 8%, /* Dark black color */
+      #000000 92%, /* Dark black color */
+      #000000 100% /* Black color */
+    );
+  }
+  
+  .button-82-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  }
+  
+  .button-82-front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: #fff;
+    background: #000000; /* Violet color */
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  }
+  
+  @media (min-width: 768px) {
+    .button-82-front {
+      font-size: 1.25rem;
+      padding: 12px 42px;
+    }
+  }
+  
+  .button-82-pushable:hover .button-82-shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  }
+  
+  .button-82-pushable:hover .button-82-front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  }
+  
+  .button-82-pushable:active .button-82-shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+  }
+  
+  .button-82-pushable:active .button-82-front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }
+  
+  .button-82-pushable:focus:not(:focus-visible) {
+    outline: none;
+  }
+  
+  .calendar-info {
+    font-family: 'Chilanka', cursive;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #000000; /* Violet color */
+    border-radius: 10px;
+    animation: highlight 1s infinite alternate;
+  }
+  
+  @keyframes highlight {
+    0% {
+      background-color: #000000; /* Violet color */
+    }
+    50% {
+      background-color: #323133; /* Dark violet color */
+    }
+    100% {
+      background-color: #525054; /* Violet color */
+    }
+  }
+  
