@@ -1636,6 +1636,7 @@ thead th.active,tbody td.active {
    display: flex;
    align-items: center;
    justify-content: space-between;
+   color: #000;
 }
 .explogo{
    background-color: white;
@@ -1678,6 +1679,12 @@ thead th.active,tbody td.active {
    font-size: 15px;
    padding: 10px;
    border-radius: 40px;
+}
+.inline{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 15px;
 }
 
 @media (max-width:1200px){
