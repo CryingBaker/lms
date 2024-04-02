@@ -551,7 +551,8 @@ section{
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
    gap:1.5rem;
    justify-content: center;
-   align-items: flex-start;
+   align-items: flex-start;margin-top: 10px;
+
 }
 
 .courses .box-container .box{
@@ -564,7 +565,8 @@ section{
    display: flex;
    align-items: center;
    gap: 1.5rem;
-   margin-bottom: 2.5rem;
+   margin-bottom: 1rem;
+   justify-content: space-between;
 }
 
 .courses .box-container .box .tutor img{
@@ -579,7 +581,20 @@ section{
    color: var(--black);
    margin-bottom: .2rem;
 }
+.c-banner{
+   width: 100%;
+      height: 100px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: var(--black);;
+      display: flex;
+      font-size: 30px;
+      color: white;
+      display: flex;
+      align-items: flex-end;
 
+}
 .courses .box-container .box .tutor span{
    font-size: 1.3rem;
    color:var(--light-color);
@@ -608,7 +623,7 @@ section{
 
 .courses .box-container .box .title{
    font-size: 2rem;
-   color: var(--black);
+   color: white;
    padding-bottom: .5rem;
    padding-top: 1rem;
 }
@@ -1625,6 +1640,7 @@ thead th.active,tbody td.active {
    border-radius: 50px;
    background-color: white;
    color: var(--main-color);;
+   font-size: 20px;
 }
 .post{
    height: 75px;
@@ -1636,7 +1652,7 @@ thead th.active,tbody td.active {
    display: flex;
    align-items: center;
    justify-content: space-between;
-   color: #000;
+   color: black;
 }
 .explogo{
    background-color: white;
