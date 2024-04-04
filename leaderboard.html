@@ -13,6 +13,7 @@
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/leaderboard.css">
    
 </head>
 <body>
@@ -63,89 +64,156 @@
    </nav>
 
 </div>
-<main class="table" id="customers_table">
-   <section class="table__header">
-       <h1>Customer's Orders</h1>
-       <div class="input-group">
-           <input type="search" placeholder="Search Data...">
-           <img src="images/search.png" alt="">
-       </div>
-       <div class="export__file">
-           <label for="export-file" class="export__file-btn" title="Export File"></label>
-           <input type="checkbox" id="export-file">
-           <div class="export__file-options">
-               <label>Export As &nbsp; &#10140;</label>
-               <label for="export-file" id="toPDF">PDF <img src="images/pdf.png" alt=""></label>
-               <label for="export-file" id="toJSON">JSON <img src="images/json.png" alt=""></label>
-               <label for="export-file" id="toCSV">CSV <img src="images/csv.png" alt=""></label>
-               <label for="export-file" id="toEXCEL">EXCEL <img src="images/excel.png" alt=""></label>
-           </div>
-       </div>
+<section class="leaderboard">
+   <h1 class="heading">Leaderboard</h1>
+   <div class="box-container">
+    <div id="legend">
+        <div class="sr">
+        <h1>Sr.no</h1>
+        </div>
+        <div class="s-name">
+        <h1>Name</h1>
+        </div>
+        <div class="batch">
+            <h1>Batch</h1>  
+        </div>
+        <div class="roll">
+        <h1>Roll no</h1>
+        </div>
+        <div class="badge">
+            <h1>Badges</h1>
+        </div>
+        <div class="pts">
+        <h1>Score   <img width="15" height="15" src="https://img.icons8.com/emoji/48/star-emoji.png" alt="star-emoji"/></h1>
+        </div>
+    </div>
+    <div class="legend">
+        <div class="sr">
+            <h1>1</h1>
+            </div>
+            <div class="s-name">
+            <h1>Saurabh Kumar</h1>
+            </div>
+            <div class="batch">
+                <h1>S2</h1>  
+            </div>
+            <div class="roll">
+            <h1>24</h1>
+            </div>
+            <div class="badge">
+                <img width="30" height="30" src="https://img.icons8.com/emoji/48/1st-place-medal-emoji.png" alt="1st-place-medal-emoji"/>
+                <img width="30" height="30" src="https://img.icons8.com/emoji/48/1st-place-medal-emoji.png" alt="1st-place-medal-emoji"/>
+                <img width="30" height="30" src="https://img.icons8.com/emoji/48/1st-place-medal-emoji.png" alt="1st-place-medal-emoji"/>
+            </div>
+            <div class="pts">
+            <h1>5000</h1>
+            </div>
+        </div>
+        <div class="legend">
+            <div class="sr">
+                <h1>2</h1>
+                </div>
+                <div class="s-name">
+                <h1>Jai Parker</h1>
+                </div>
+                <div class="batch">
+                    <h1>S2</h1>  
+                </div>
+                <div class="roll">
+                <h1>41</h1>
+                </div>
+                <div class="badge">
+                    <img width="30" height="30" src="https://img.icons8.com/emoji/48/2nd-place-medal-emoji.png" alt="1st-place-medal-emoji"/>
+                    <img width="30" height="30" src="https://img.icons8.com/emoji/48/3rd-place-medal-emoji.png" alt="1st-place-medal-emoji"/>
+                    <img width="30" height="30" src="https://img.icons8.com/emoji/48/2nd-place-medal-emoji.png" alt="1st-place-medal-emoji"/>
+                </div>
+                <div class="pts">
+                <h1>4500</h1>
+                </div>
+            </div>
+            <div class="legend">
+                <div class="sr">
+                    <h1>3</h1>
+                    </div>
+                    <div class="s-name">
+                    <h1>Atharv Wadadekar</h1>
+                    </div>
+                    <div class="batch">
+                        <h1>S3</h1>  
+                    </div>
+                    <div class="roll">
+                    <h1>69</h1>
+                    </div>
+                    <div class="badge">
+                        <img width="30" height="30" src="https://img.icons8.com/emoji/48/3rd-place-medal-emoji.png" alt="1st-place-medal-emoji"/>
+                        <img width="30" height="30" src="https://img.icons8.com/emoji/48/2nd-place-medal-emoji.png" alt="1st-place-medal-emoji"/>
+                        </div>
+                    <div class="pts">
+                    <h1>4100</h1>
+                    </div>
+                </div>
+                <div class="legend">
+                    <div class="sr">
+                        <h1>4</h1>
+                        </div>
+                        <div class="s-name">
+                        <h1>Megh Shah</h1>
+                        </div>
+                        <div class="batch">
+                            <h1>S3</h1>  
+                        </div>
+                        <div class="roll">
+                        <h1>54</h1>
+                        </div>
+                        <div class="badge">
+                            <img width="30" height="30" src="https://img.icons8.com/emoji/48/3rd-place-medal-emoji.png" alt="1st-place-medal-emoji"/>
+                            </div>
+                        <div class="pts">
+                        <h1>4000</h1>
+                        </div>
+                    </div>
+                    <div class="legend">
+                        <div class="sr">
+                            <h1>5</h1>
+                            </div>
+                            <div class="s-name">
+                            <h1>Siddhesh Rane</h1>
+                            </div>
+                            <div class="batch">
+                                <h1>S3</h1>  
+                            </div>
+                            <div class="roll">
+                            <h1>48</h1>
+                            </div>
+                            <div class="badge">
+                                </div>
+                            <div class="pts">
+                            <h1>3700</h1>
+                            </div>
+                        </div>
+                        <div class="legend">
+                            <div class="sr">
+                                <h1>6</h1>
+                                </div>
+                                <div class="s-name">
+                                <h1>Suyash Saraf</h1>
+                                </div>
+                                <div class="batch">
+                                    <h1>S3</h1>  
+                                </div>
+                                <div class="roll">
+                                <h1>52</h1>
+                                </div>
+                                <div class="badge">
+                                    </div>
+                                <div class="pts">
+                                <h1>3600</h1>
+                                </div>
+                            </div>
+
+    </div>
+   </div>
    </section>
-   <secstion class="table__body">
-       <table>
-           <thead>
-               <tr>
-                   <th> Id <span class="icon-arrow">&UpArrow;</span></th>
-                   <th> Student <span class="icon-arrow">&UpArrow;</span></th>
-                   <th> Class <span class="icon-arrow">&UpArrow;</span></th>
-                   <th> Batch <span class="icon-arrow">&UpArrow;</span></th>
-                   <th> Badge <span class="icon-arrow">&UpArrow;</span></th>
-                   <th> Score <span class="icon-arrow">&UpArrow;</span></th>
-               </tr>
-           </thead>
-           <tbody>
-               <tr>
-                   <td> 1 </td>
-                   <td> <img src="sk.jpg" alt="">Saurabh Kumar</td>
-                   <td> SY </td>
-                   <td> S2 </td>
-                   <td>
-                   </td>
-                   <td> <strong> 5000 </strong></td>
-               </tr>
-               <tr>
-                <td> 2 </td>
-                <td> <img src="sk.jpg" alt="">Jai Parker</td>
-                <td> SY </td>
-                <td> S2 </td>
-                <td>
-                </td>
-                <td> <strong> 4900 </strong></td>
-            </tr>
-            <tr>
-                <td> 3 </td>
-                <td> <img src="sk.jpg" alt="">Megh Shah</td>
-                <td> SY </td>
-                <td> S3 </td>
-                <td>
-                </td>
-                <td> <strong> 4800 </strong></td>
-            </tr>
-            <tr>
-                <td> 4 </td>
-                <td> <img src="sk.jpg" alt="">Atharv Wadadekar</td>
-                <td> SY </td>
-                <td> S3 </td>
-                <td>
-                </td>
-                <td> <strong> 4750 </strong></td>
-            </tr>
-            <tr>
-                <td> 5 </td>
-                <td> <img src="sk.jpg" alt="">Ankur Chheda</td>
-                <td> SY </td>
-                <td> S1 </td>
-                <td>
-                </td>
-                <td> <strong> 4745 </strong></td>
-            </tr>
-               
-               </tr>
-           </tbody>
-       </table>
-   </section>
-   </main>
 <footer class="footer">
 
     &copy; copyright @ 2024 by <span>Group 16</span> | all rights reserved!

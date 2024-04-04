@@ -1,3 +1,10 @@
+.quiz .box-container{
+
+  font-size: 20px;
+  padding: 20px;
+  width: 100%;
+
+}
 .q-title{
     width: 100%;
     height: auto;
