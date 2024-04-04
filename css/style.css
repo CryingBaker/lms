@@ -551,7 +551,15 @@ section{
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
    gap:1.5rem;
    justify-content: center;
-   align-items: flex-start;margin-top: 10px;
+   align-items: flex-start;
+   margin-top: 10px;
+
+}
+.quiz .box-container{
+
+      font-size: 20px;
+      padding: 20px;
+      width: 100%;
 
 }
 

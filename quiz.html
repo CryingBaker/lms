@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>home</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/quiz.css">
+   
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo">GrooveLearn</a>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name">Parmesh</h3>
+         <p class="role">studen</p>
+         <a href="profile.html" class="btn">view profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">login</a>
+            <a href="register.html" class="option-btn">register</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <a href="profile.html"><img src="images/pic-1.jpg" class="image" alt=""></a>
+   </div>
+
+   <nav class="navbar">
+      <div>
+      <a href="/home"><i class="fas fa-home"></i></a>
+      <a href="/courses"><i class="fas fa-graduation-cap"></i></a>
+      <a href="/calender"><i class="fa-solid fa-calendar-days"></i></a>
+      <a href="/leaderboard"><i class="fa-solid fa-ranking-star"></i></a>
+      </div>
+      <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+   </nav>
+
+</div>
+<section class="quiz">
+<div class="box-container">
+    <div class="q-title">
+        <h1>Introduction to Data Structures</h1>
+        <p>Dear all...
+            Submit the Experiment No. 1 as per the given deadline.
+            See the attached documents for instructions and commands.</p>
+         <div class="level">
+            <h3>Type: Memorization</h3>
+            <h3><img width="20" height="20" src="https://img.icons8.com/emoji/48/star-emoji.png" alt="star-emoji"/> +25</h3> 
+         </div>
+    </div>
+    <div class="ques">
+        <h1>Q.1 What is a data structure ?</h1>
+        <div class="level">
+        <h3>Level: Easy</h3>
+        <h3><img width="20" height="20" src="https://img.icons8.com/emoji/48/star-emoji.png" alt="star-emoji"/> +1</h3> 
+      </div>
+        <div class="opt">
+        <label class="container">
+            <input type="checkbox">A programming language
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">
+            <input type="checkbox">A collection of algorithms
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">
+            <input type="checkbox">A way to store and organize data
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">
+            <input type="checkbox">A type of computer hardware
+            <span class="checkmark"></span>
+          </label>
+        </div>
+    </div>
+    <div class="ques">
+      <h1>Q.2 What are the disadvantages of arrays?</h1>
+      <div class="level">
+      <h3>Level: Moderate</h3>
+      <h3><img width="20" height="20" src="https://img.icons8.com/emoji/48/star-emoji.png" alt="star-emoji"/> +2</h3> 
+    </div>
+      <div class="opt">
+      <label class="container">
+          <input type="checkbox">Index value of an array can be negative
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">
+          <input type="checkbox">Elements are sequentially accessed
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">
+          <input type="checkbox">Data structure like queue or stack cannot be implemented
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">
+          <input type="checkbox">There are chances of wastage of memory space if elements inserted in an array are lesser than the allocated size
+          <span class="checkmark"></span>
+        </label>
+      </div>
+  </div>
+  <div class="ques">
+   <h1>Q.3 Which data structure is used for implementing recursion?</h1>
+   <div class="level">
+   <h3>Level: Difficult</h3>
+   <h3><img width="20" height="20" src="https://img.icons8.com/emoji/48/star-emoji.png" alt="star-emoji"/> +3</h3> 
+ </div>
+   <div class="opt">
+   <label class="container">
+       <input type="checkbox">Stack
+       <span class="checkmark"></span>
+     </label>
+     <label class="container">
+       <input type="checkbox">Queue
+       <span class="checkmark"></span>
+     </label>
+     <label class="container">
+       <input type="checkbox">List
+       <span class="checkmark"></span>
+     </label>
+     <label class="container">
+       <input type="checkbox">Array
+       <span class="checkmark"></span>
+     </label>
+   </div>
+</div>
+</div>
+</section>
+<footer class="footer">
+
+   &copy; copyright @ 2024 by <span>Group 16</span> | all rights reserved!
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+   
+</body>
+</html>
