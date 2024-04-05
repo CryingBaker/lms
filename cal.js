@@ -1,89 +1,91 @@
 let year = new Date().getFullYear();
 let month = new Date().getMonth();
+
 function generateCalendar(year, month) {
-	const startDate = new Date(year, month, 1);
-	const endDate = new Date(year, month + 1, 0);
+    const startDate = new Date(year, month, 1);
+    const endDate = new Date(year, month + 1, 0);
 
-	const calendar = document.getElementById('calendar');
-	const tbody = calendar.querySelector('tbody');
+    const calendar = document.getElementById('calendar');
+    const tbody = calendar.querySelector('tbody');
 
-	tbody.innerHTML = '';
+    tbody.innerHTML = '';
 
-	let currentDate = startDate;
-	let week = 1;
+    let currentDate = new Date(startDate); // Create a copy of startDate to avoid modifying it
+    currentDate.setDate(1); // Set the date to the 1st of the month
 
-	while (currentDate <= endDate) {
-		const row = document.createElement('tr');
+    let startDayOfWeek = currentDate.getDay(); // Get the day of the week for the 1st of the month
+    if (startDayOfWeek === 0) startDayOfWeek = 7; // Adjust Sunday to be 7 instead of 0
 
-		for (let day = 1; day <= 7; day++) {
-			if (currentDate > endDate || currentDate < startDate) {
-				const cell = document.createElement('td');
-				cell.textContent = '';
-				row.appendChild(cell);
-			} else {
-				const cell = document.createElement('td');
-				cell.textContent = currentDate.getDate();
+    let week = 1;
 
-				// Add a click event listener to allow users to add events
-				cell.addEventListener('click', () => {
-					const eventName = prompt('Enter the name of the event:');
-					const eventDetails = prompt('Enter the details of the event:');
+    for (let i = 1; i <= 6; i++) { // Loop over potential 6 weeks
+        const row = document.createElement('tr');
 
-					// Add the event to the calendar
-					const eventDiv = document.createElement('div');
-					eventDiv.textContent = `${eventName} - ${eventDetails}`;
-					eventDiv.style.backgroundColor = 'yellow';
-					eventDiv.style.padding = '5px';
-					cell.appendChild(eventDiv);
-				});
+        for (let day = 1; day <= 7; day++) {
+            const cell = document.createElement('td');
 
-				row.appendChild(cell);
+            if ((i === 1 && day < startDayOfWeek) || currentDate > endDate) {
+                cell.textContent = ''; // Empty cell for days before the start of the month or after the end
+            } else {
+                cell.textContent = currentDate.getDate();
+                currentDate.setDate(currentDate.getDate() + 1);
 
-				if (currentDate.getDay() === 0) {
-					week++;
-				}
-			}
+                // Add a click event listener to allow users to add events
+                cell.addEventListener('click', () => {
+                    const eventName = prompt('Enter the name of the event:');
+                    const eventDetails = prompt('Enter the details of the event:');
 
-			currentDate.setDate(currentDate.getDate() + 1);
-		}
+                    // Add the event to the calendar
+                    const eventDiv = document.createElement('div');
+                    eventDiv.textContent = `${eventName} - ${eventDetails}`;
+                    eventDiv.style.backgroundColor = 'yellow';
+                    eventDiv.style.padding = '5px';
+                    cell.appendChild(eventDiv);
+                });
+            }
 
-		tbody.appendChild(row);
-	}
+            row.appendChild(cell);
+        }
+
+        tbody.appendChild(row);
+
+        if (currentDate > endDate) break; // Break the loop if we've reached the end of the month
+    }
 }
 
 function prevMonth() {
     if (month === 0) {
-      year--;
-      month = 11;
+        year--;
+        month = 11;
     } else {
-      month--;
+        month--;
     }
     generateCalendar(year, month);
     document.getElementById('month-value').textContent = new Date(year, month).toLocaleString('default', { month: 'long' });
     document.getElementById('year-value').textContent = year;
-  }
-  
-  function nextMonth() {
+}
+
+function nextMonth() {
     if (month === 11) {
-      year++;
-      month = 0;
+        year++;
+        month = 0;
     } else {
-      month++;
+        month++;
     }
     generateCalendar(year, month);
     document.getElementById('month-value').textContent = new Date(year, month).toLocaleString('default', { month: 'long' });
     document.getElementById('year-value').textContent = year;
-  }
-  
-  function selectYear() {
+}
+
+function selectYear() {
     const yearValue = prompt('Enter the year:');
     if (yearValue && !isNaN(yearValue)) {
-      year = parseInt(yearValue);
-      month = new Date(year, month).getMonth();
-      generateCalendar(year, month);
-      document.getElementById('year-value').textContent = year;
-      document.getElementById('month-value').textContent = new Date(year, month).toLocaleString('default', { month: 'long' });
+        year = parseInt(yearValue);
+        month = new Date(year, month).getMonth();
+        generateCalendar(year, month);
+        document.getElementById('year-value').textContent = year;
+        document.getElementById('month-value').textContent = new Date(year, month).toLocaleString('default', { month: 'long' });
     }
-  }
-  
-  generateCalendar(year, month);
+}
+
+generateCalendar(year, month);
